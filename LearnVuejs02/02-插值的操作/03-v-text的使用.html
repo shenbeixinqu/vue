@@ -1,0 +1,25 @@
+<!-- v-text的作用和mustache比较相似，用于将数据显示在界面上 -->
+<!-- 通常情况下，接受一个string类型  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2 v-text="message"></h2>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data:{
+               message: "你好，世界"
+            }
+        })
+    </script>
+</body>
+</html>
