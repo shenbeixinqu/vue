@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <cpn :cmovies="movies"></cpn>
+    </div>
+    <template id="cpn">
+        <div>
+            <li>{{cmovies}}</li>
+        </div>
+    </template>
+
+    <script src="../js/vue.js"></script>
+    <script>
+        const cpn = {
+            template: '#cpn',
+            props:['cmovies'],
+            data() {
+                return { 
+                }
+            },
+            methods: {
+            },
+        }
+
+        const app = new Vue({
+            el: "#app",
+            data:{
+                movies: ['海','海贼王', '海岸数据']
+            },
+            components:{
+                cpn
+            }
+        })
+    </script>
+</body>
+</html>
